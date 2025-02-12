@@ -9,3 +9,6 @@ MAIN() {
   else
     ELEMENT $1
   fi
+}
+
+MAIN
