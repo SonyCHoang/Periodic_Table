@@ -17,7 +17,7 @@ ELEMENT_PROGRAM() {
   then
     ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements where atomic_number=$ELEMENT")
   else
-    ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE name=$ELEMENT OR symbol=$ELEMENT")
+    ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE name='$ELEMENT' OR symbol='$ELEMENT'")
   fi
 
   if [[ -z $ATOMIC_NUMBER ]]
